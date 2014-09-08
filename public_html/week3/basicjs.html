@@ -10,7 +10,9 @@
     <body onload='init()'>
         <div>Using CDATA</div>
         <div>
-            Randomize Background Color:<button onclick="randomizeBackground()">Click Me</button>
+            Randomize Background Color:
+            <button onclick="randomizeBackground()">Click Me</button>
+            <button onclick='revert()'>Revert</button>
         </div>
         <div id='lastModifiedAt'>loading...</div>
         <hr></hr>
@@ -22,20 +24,28 @@
         </div>
         <script type="text/javascript">
         //<![CDATA[
+        var lastColorSet = null;
         function init() {
             console.log('Enter init function at %s', new Date().toLocaleTimeString());
             var lastModifiedAt = document.getElementById('lastModifiedAt');
+
             if ( lastModifiedAt !== 'undefined' )
                 lastModifiedAt.innerHTML="Last modified at: " + document.lastModified;
             
+            // code below sets browser details
             setBrowserDetails();
             
             console.log('Exit init function at %s', new Date().toLocaleTimeString());
         }        
+        function revert()
+        {
+             document.body.style.backgroundColor = lastColorSet;
+        }
         function randomizeBackground() {
             var r = Math.floor(Math.random() * 255).toString(16);
             var g = Math.floor(Math.random() * 255).toString(16);
             var b = Math.floor(Math.random() * 255).toString(16);
+            lastColorSet = document.body.style.backgroundColor;
             document.body.style.backgroundColor = "#" + 
                     (r.length === 1 ? "0" + r : r) + 
                     (g.length === 1 ? "0" + g : g) + 
