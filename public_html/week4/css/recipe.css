@@ -1,0 +1,127 @@
+/* line 1, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\000031}}
+article > div {
+  float: left;
+  width: 348px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  padding: 24px;
+  background: #FFF;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 14, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\0000314}}
+article > aside {
+  float: right;
+  width: 228px;
+}
+/* line 18, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\0000318}}
+article > aside img {
+  width: 218px;
+  padding: 4px;
+  background-color: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (min-width: 1212px) {
+  /* line 29, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\0000329}}
+  body {
+    padding: 96px 72px 0;
+    width: 1068px;
+    position: relative;
+  }
+  /* line 35, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\0000335}}
+  article > div {
+    width: 600px;
+    margin-bottom: 24px;
+  }
+  /* line 40, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\0000340}}
+  article > aside {
+    width: 396px;
+  }
+  /* line 44, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\0000344}}
+  article > aside img {
+    width: 386px;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+  /* line 51, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\0000351}}
+  body {
+    padding: 60px 42px 0;
+    width: 396px;
+    -webkit-text-size-adjust: 100%;
+  }
+  /* line 57, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\0000357}}
+  article > div,
+  article > footer,
+  article > aside {
+    float: none;
+    clear: none;
+  }
+  /* line 62, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\0000362}}
+  article > div {
+    width: 348px;
+  }
+  /* line 66, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\0000366}}
+  article > aside img {
+    width: 386px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 74, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\0000374}}
+  body {
+    padding: 48px 46px 0;
+    width: 228px;
+    -webkit-text-size-adjust: 100%;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  /* line 82, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\0000382}}
+  article > div {
+    width: 192px;
+    padding: 18px;
+    margin-bottom: 18px;
+  }
+  /* line 88, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\0000388}}
+  article > header > h1 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+  /* line 93, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\0000393}}
+  article > div > header > h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  /* line 99, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\0000399}}
+  article > div,
+  article > footer,
+  article > aside {
+    float: none;
+    clear: none;
+  }
+  /* line 104, /home/bk/source/infsci2560_samples/public_html/week4/less/recipe.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/bk\/source\/infsci2560_samples\/public_html\/week4\/less\/recipe\.less}line{font-family:\00003104}}
+  p,
+  section,
+  aside,
+  ul {
+    margin-top: 18px;
+  }
+}
