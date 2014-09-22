@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+        <script>
+            $(function(){
+                $.support.cors = true;
+                //var url = "https://docs.google.com/uc?authuser=0&id=0B5P70e0JUj3hYW9EYmJmNGVvbmM";
+                var url = "https://spreadsheets.google.com/feeds/list/1_Nnpr-7ig9ajAyBrTbozZ49fYe6V-uFIUHXGdULwffI/od6/public/values?alt=json";
+                //var url = "https://spreadsheets.google.com/feeds/list/1_Nnpr-7ig9ajAyBrTbozZ49fYe6V-uFIUHXGdULwffI/od6/public/values";
+                
+                $.ajax({
+                    url: url,
+                    crossDomain: true,
+                    contentType: 'application/octet-stream; charset=UTF-8',
+                    success: function(response){      
+                        alert(JSON.stringify(response));
+                    },
+                    error: function(x,m,r) {
+                        alert(r);
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div>Relevant Links 2</div>
+        <div id="data">    
+        </div>
+    </body>
+</html>
