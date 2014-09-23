@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                var expressions = [
+                    {   xpath: '/bookstore/book/title',
+                        elementId: 'xpath1' },
+                    {   xpath: '/bookstore/book/price[text()]',
+                        elementId: 'xpath2' },
+                    {   xpath: '/bookstore/book[price>35]/title',
+                        elementId: 'xpath3' }
+                ];
+                
+                $.get('data/books.xml', function(xml){
+                    for ( var i = 0; i < expressions.length; i++ ) {
+                        var item = expressions[i];
+                        var path = item.xpath;
+                        var nodes=xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+                        var result=nodes.iterateNext();
+                        var htmlElement = document.getElementById(item.elementId);
+                        while (result)
+                        {
+                            var li=document.createElement("li");
+                            var textnode=document.createTextNode(result.childNodes[0].nodeValue);
+                            li.appendChild(textnode);
+                            htmlElement.appendChild(li);
+                            result=nodes.iterateNext();
+                        }
+                    };    
+                });
+                
+            });
+        </script>
+    </head>
+    <body>
+        <div>XPath 1 Result</div>
+        <ul id="xpath1"></ul>
+        <hr/>
+        <div>XPath 2 Result</div>
+        <ul id="xpath2"></ul>
+        <hr/>
+        <div>XPath 3 Result</div>
+        <ul id="xpath3"></ul>
+    </body>
+</html>
