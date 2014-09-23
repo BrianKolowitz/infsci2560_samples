@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<links>
+    <link>
+        <heading>Google</heading>
+        <description>A usefule search engine.</description>
+        <alt>Google's Web Site</alt>
+        <href>http://www.google.com</href>
+    </link>
+    <link>
+        <heading>Yahoo</heading>
+        <description>An interesting search engine.</description>
+        <alt>Yahoo's Web Site</alt>
+        <href>http://www.yahoo.com</href>
+    </link>
+    <link>
+        <heading>Bing</heading>
+        <description>A newer search engine.</description>
+        <alt>Bing's Web Site</alt>
+        <href>http://www.bing.com</href>
+    </link>
+</links>
