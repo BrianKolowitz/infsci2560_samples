@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function init() {
+                var req = new XMLHttpRequest();
+
+                req.open("GET", "data/peopleDB.xml", false); 
+                req.send(null);
+
+                var xmlDoc = req.responseXML;		
+
+                var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
+
+                var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult.ANY_TYPE, null );
+                
+                var thisPerson = personIterator.iterateNext();
+
+                var alertText = 'People in this document are:\n'
+
+                while (thisPerson) {
+                  alertText += thisPerson.textContent + '\n';
+                  thisPerson = personIterator.iterateNext();
+                }
+                
+                console.log(alertText);
+                alert(alertText);
+            }
+        </script>
+    </head>
+    <body onload="init();">
+        <div>TODO write content</div>
+    </body>
+</html>

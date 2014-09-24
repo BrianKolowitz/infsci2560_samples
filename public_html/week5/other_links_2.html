@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap-theme.css" rel="stylesheet">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script>
+            $(function(){
+                $.get('data/links.xml', function(xml){
+                    var path= '/links/link/heading';
+                    var nodes=xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+                    var node = nodes.iterateNext();
+                    while ( node ) {
+                        var description = xml.evaluate('following-sibling::description[1]', node, null, XPathResult.ANY_TYPE, null).iterateNext().textContent;
+                        var alt = xml.evaluate('following-sibling::alt[1]', node, null, XPathResult.ANY_TYPE, null).iterateNext().textContent;
+                        var href = xml.evaluate('following-sibling::href[1]', node, null, XPathResult.ANY_TYPE, null).iterateNext().textContent;
+                       
+                        var html =
+                            '<a href="' + href + '" alt="' + alt + '" class="list-group-item">' +
+                                '<h4 class="list-group-item-heading">' + node.textContent + '</h4>' +
+                                '<p class="list-group-item-text">' + description + '</p>' +
+                            '</a>';
+                        $('#otherLinks').append(html);
+                        node = nodes.iterateNext();
+                    }                    
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="otherLinks" class="list-group">
+        </div>
+    </body>
+</html>
