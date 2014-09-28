@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function checkssn(Obj){
+                ss_re = /(\d{3})\s?-?(\d{2})\s?-?(\d{4})/;
+                ss = Obj.value;
+                if(!ss_re.test(ss)) {
+                    alert("invalid SSN number");
+                    Obj.value="";
+                    Obj.focus();
+                } else {
+                    Obj.value=RegExp.$1 + "-" + RegExp.$2 + "-" + RegExp.$3;
+                }
+            }
+            function checkphone(Obj){
+                phone_re = /\(?(\d{3})\)?\s?(\d{3})-?(\d{4})/;
+                number = Obj.value;
+                if(!phone_re.test(number)) {
+                    alert("invalid phone number");
+                    Obj.value="";
+                    Obj.focus();
+                } else {
+                    Obj.value="(" + RegExp.$1 + ")" + RegExp.$2 + "-" + RegExp.$3;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="regexTest">
+            SSN:<input type="text" name="ssn" onchange="checkssn(this)"><br/>
+            PHONE:<input type="text" name="ph" onchange="checkphone(this)"><br/>
+        </form>
+    </body>
+</html>

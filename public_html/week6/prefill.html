@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Prefilling</title>
+        <script type="text/javascript">
+            function formatDate(dateVar) {
+                M = dateVar.getMonth() + 1;
+                MS = ((M < 10) ? '0' : '') + M;
+                D = dateVar.getDay() + 1;
+                DS = (D < 10 ? '0' : '') + D;
+                Y = dateVar.getYear() + 1900;
+                return MS + '/' + DS + '/' + Y.toString();
+            }
+
+            function prefill() {
+                today = new Date();
+                document.f1.PayDate.value = formatDate(today);
+            }
+        </script>
+    </head>
+
+    <body onload="prefill()">
+        <form name="f1">
+            Date: <input type=text name="PayDate" value="text 1">
+            <input type=submit value="Submit/Validate">
+        </form> 
+    </body>
+</html>

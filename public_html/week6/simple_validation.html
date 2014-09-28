@@ -1,0 +1,58 @@
+<HTML>
+    <HEAD>
+        <TITLE>Javascript Validation</TITLE>
+        <SCRIPT>
+            function checkphone(Obj) {
+                chkstr = document.myform.PHONE.value;
+                for (i = 0; i < chkstr.length; i++) {
+                    ch = chkstr.substring(i, i + 1);
+                    // check each character
+                    if (ch >= "0" && ch <= "9") {
+                    }
+                    else {
+                        window.alert(" Phone number is digits only ");
+                        Obj.value = "";
+                        Obj.focus();
+                        break;
+                    }
+                }
+            }
+
+            function checkname(Obj) {
+                chkstr = document.myform.NAME.value;
+                for (i = 0; i < chkstr.length; i++) {
+                    ch = chkstr.substring(i, i + 1);
+                    // check each character
+                    if (ch >= "a" && ch <= "z" ||
+                            ch >= "A" && ch <= "Z") {
+                    }
+                    else {
+                        window.alert(" Name is characters only ");
+                        Obj.value = "";
+                        Obj.focus();
+                        break;
+                    }
+                }
+            }
+
+            function checknum(Obj, min, max) {
+                val = Obj.value
+                if ((val <= min || val > max)) {
+                    window.alert("value in " + Obj.name + " : " + Obj.value + ", is out of bounds, must be between " + min + " and " + max);
+                    Obj.value = "";
+                    Obj.focus();
+                }
+            }
+
+
+        </SCRIPT>
+    </HEAD>
+    <BODY>
+        <FORM name = myform method = post action ="">
+            <P>Phone:<INPUT TYPE=TEXT NAME=PHONE VALUE=0 onchange="checkphone(this)" />
+            <P>Name:<INPUT TYPE=TEXT NAME=NAME VALUE=0 onchange="checkname(this)" />
+            <P>Number:<INPUT TYPE=TEXT NAME=NUMBER VALUE=0 onchange="checknum(this, -200, 100)" />
+            <P><input type = submit name=submit>
+        </FORM>
+    </BODY>
+</HTML>
