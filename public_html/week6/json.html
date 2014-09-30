@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type='text/javascript'>
+            var infsci2560 = {
+                instructor: {firstName: "Brian", lastName: "Kolowitz"},
+                students: [
+                    {firstName: "John", lastName: "Doe" }, 
+                    {firstName: "Jane" , lastName: "Smith" }, 
+                    {firstName: "Donald" , lastName: "Duck" }
+                ]
+            };
+            
+            function init() {
+                document.getElementById('instructor').innerHTML = formatName(infsci2560.instructor);
+            
+                var studentList = document.getElementById('students');
+                for ( var i = 0; i < infsci2560.students.length; i++ ) {
+                    var student = infsci2560.students[i];
+                    var li = document.createElement('li');
+                    li.appendChild(document.createTextNode(formatName(student)));
+                    studentList.appendChild(li);
+                }
+            }
+            function formatName(person) {
+                return '' + person.lastName + ', ' + person.firstName;
+            }
+        </script>
+    </head>
+    <body onload="init()">
+        Instructor<div id='instructor'></div><hr/>
+        Students<div><ul id='students'></ul></div>
+    </body>
+</html>
