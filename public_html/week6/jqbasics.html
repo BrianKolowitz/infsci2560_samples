@@ -15,11 +15,17 @@
                 $('#toggle').click(function(e){
                     $items.toggle();
                 });
+                
+                $('#toggleSlow').click(function(e){
+                    $items.toggle('slow');
+                });
             });
         </script>
     </head>
     <body>
-        <button id='additem'>Add</button>&nbsp;<button id='toggle'>Show/Hide</button><br/>
+        <button id='additem'>Add</button>
+        &nbsp;<button id='toggle'>Show/Hide</button>
+        &nbsp;<button id='toggleSlow'>Show/Hide Slow</button><br/>
         <ul id='items'></ul>
     </body>
 </html>
