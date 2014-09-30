@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type='text/javascript'>
+            $(function() {
+                $.getJSON('data/infsci2560.json', function(json) {
+                    var infsci2560 = JSON.parse(json);
+                    
+                    $("#instructor").html(formatName(infsci2560.instructor));
+            
+                    var $studentList = $("#students");
+                    $(infsci2560.students).each(function(index, student){
+                        $studentList.append("<li>" + formatName(student) + "</li>");
+                    });
+                });
+            });
+
+            function formatName(person) {
+                return '' + person.lastName + ', ' + person.firstName;
+            }
+        </script>
+    </head>
+    <body>
+        Instructor<div id='instructor'></div><hr/>
+        Students<div><ul id='students'></ul></div>
+    </body>
+</html>
