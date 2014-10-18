@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE contacts PUBLIC "-//Beginning XML//DTD Contact Example//EN" "contacts4.dtd">
 <contacts source="Beginning XML 5E" version="1.0">
-    <contact person="Joe_Fawcett" tags="author xml poetry">
+    <contact person="Joseph_Fawcett" tags="author xml poetry">
         <name>
             <first>Joseph</first>
             <first>John</first>
@@ -12,12 +12,12 @@
             <latitude>50.7218</latitude>
             <longitude>-3.533617</longitude>
         </location>
-        <phone kind="home">001-234-567-8910</phone>
+        <phone kind="Home">001-234-567-8910</phone>
         <knows contacts="John_Doe Danny_Ayers" />
         <description>Joseph is a developer and author for Beginning XML <em>5th edition</em>
         <br/>Joseph <strong>loves</strong> XML!</description>
     </contact>
-    <contact person="John Doe" tags="author consultant CGI">
+    <contact person="John_Doe" tags="author consultant CGI">
         <name>
             <first>John</first>
             <last>Doe</last>
@@ -27,6 +27,18 @@
         </location>
         <phone>321 321 3213</phone>
         <knows contacts="Joseph_Fawcett Danny_Ayers" />
+        <description>Senior Technical Consultant for LMX.</description>
+    </contact>
+    <contact person="Danny_Ayers" tags="author consultant CGI">
+        <name>
+            <first>Danny</first>
+            <last>Ayers</last>
+        </name>
+        <location>
+            <address>Address is not known</address>
+        </location>
+        <phone>213 213 2131</phone>
+        <knows contacts="Joseph_Fawcett John_Doe" />
         <description>Senior Technical Consultant for LMX.</description>
     </contact>
 </contacts>

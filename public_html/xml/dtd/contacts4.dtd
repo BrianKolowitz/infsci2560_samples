@@ -1,4 +1,4 @@
-<!ELEMENT contacts(contact*)>
+<!ELEMENT contacts (contact*)>
 <!ATTLIST contacts version CDATA #FIXED "1.0">
 <!ATTLIST contacts source CDATA #IMPLIED>
 
@@ -20,7 +20,7 @@
 <!ENTITY % DefaultPhoneKind '"Home"'>
 <!ATTLIST phone kind (Home | Work | Cell | Fax) %DefaultPhoneKind;>
 
-<!ELEMENT knows (#PCDATA) EMPTY>
+<!ELEMENT knows EMPTY>
 <!ATTLIST knows contacts IDREFS #IMPLIED>
 
 <!ELEMENT description (#PCDATA | em | strong | br)*>
