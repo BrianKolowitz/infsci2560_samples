@@ -1,0 +1,28 @@
+<!ELEMENT contacts(contact*)>
+<!ATTLIST contacts version CDATA #FIXED "1.0">
+<!ATTLIST contacts source CDATA #IMPLIED>
+
+<!ELEMENT contact (name, location, phone, knows, description)>
+<!ATTLIST contact person ID #REQUIRED>
+<!ATTLIST contact tags NMTOKENS #IMPLIED>
+
+<!ELEMENT name (first+, middle?, last)>
+<!ELEMENT first (#PCDATA)>
+<!ELEMENT middle (#PCDATA)>
+<!ELEMENT last (#PCDATA)>
+
+<!ELEMENT location (address | (latitude, longitude))*>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT latitude (#PCDATA)>
+<!ELEMENT longitude (#PCDATA)>
+
+<!ELEMENT phone (#PCDATA)>
+<!ATTLIST phone kind (Home | Work | Cell | Fax) "Home">
+
+<!ELEMENT knows (#PCDATA) EMPTY>
+<!ATTLIST knows contacts IDREFS #IMPLIED>
+
+<!ELEMENT description (#PCDATA | em | strong | br)*>
+<!ELEMENT em (#PCDATA)>
+<!ELEMENT strong (#PCDATA)>
+<!ELEMENT br EMPTY>

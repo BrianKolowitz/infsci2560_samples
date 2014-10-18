@@ -1,0 +1,20 @@
+<!ELEMENT contacts(contact*)>
+<!ELEMENT contact (name, location, phone, knows, description)>
+
+<!ELEMENT name (first+, middle?, last)>
+<!ELEMENT first (#PCDATA)>
+<!ELEMENT middle (#PCDATA)>
+<!ELEMENT last (#PCDATA)>
+
+<!ELEMENT location (address | (latitude, longitude))*>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT latitude (#PCDATA)>
+<!ELEMENT longitude (#PCDATA)>
+
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT knows (#PCDATA)>
+
+<!ELEMENT description (#PCDATA | em | strong | br)*>
+<!ELEMENT em (#PCDATA)>
+<!ELEMENT strong (#PCDATA)>
+<!ELEMENT br EMPTY>
